@@ -5,10 +5,10 @@ import twitter
 import time
 import keys
 
-twitter = []
+t = []
 for key in keys.keys:
 
-    twitter.append(twitter.Api(key[0],key[1],key[2],key[3]))
+    t.append(twitter.Api(key[0],key[1],key[2],key[3]))
 
 
 
@@ -17,7 +17,7 @@ data = text.make_data()
 
 while True:
 
-    for i in twitter:
+    for i in t:
 
         result = generate.generate(data)
         result = 'bot:' + result
